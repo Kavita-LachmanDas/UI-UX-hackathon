@@ -377,7 +377,7 @@ export default function BillingPage() {
               {/* Additional Information */}
               <div>
                 <textarea
-                  rows="2"
+                  
                   placeholder="Additional Information"
                   className="mt-1 block w-full sm:w-[300px] px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
                 />
