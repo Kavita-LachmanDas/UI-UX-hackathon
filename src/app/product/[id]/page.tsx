@@ -4,7 +4,7 @@ import Header from "@/app/component/Header";
 
 import { Products } from "@/app/data/Products";
 import Image from "next/image";
-import { useState } from "react";
+// import { useState } from "react";
 
 export default function ProductDetail({ params }: { params: { id: string } }) {
   const product = Products.find((item) => item.id === parseInt(params.id));
