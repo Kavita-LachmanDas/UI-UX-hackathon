@@ -123,7 +123,7 @@ export default function Cart() {
   const price = 250000;
   const subtotal = price * quantity;
 
-  const handleQuantityChange = (e) => {
+  const handleQuantityChange = (e: { target: { value: string; }; }) => {
     const value = Math.max(1, parseInt(e.target.value) || 1);
     setQuantity(value);
   };

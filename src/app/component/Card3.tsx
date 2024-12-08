@@ -2,8 +2,9 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { BiCalendar, BiTime } from 'react-icons/bi'
+import { StaticImport } from 'next/dist/shared/lib/get-img-props'
 
-export default function Card3(Props) {
+export default function Card3(Props: { img: string | StaticImport; para: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | null | undefined }) {
   return (
     <div className="w-full sm:w-[350px] md:w-[300px] lg:w-[350px] p-4 overflow-x-hidden">
       <div className="img">
