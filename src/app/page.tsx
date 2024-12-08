@@ -1,101 +1,50 @@
-import Image from "next/image";
+import React from 'react'
+import Hero from './component/Hero'
+import Header from './component/Header'
+import Card from './Card'
+import NextCard from './component/NextCard'
+import Card2 from './component/Card2'
+import Same from './component/Same'
+import Card3 from './component/Card3'
+import Link from 'next/link'
+import Follow from './component/Follow'
+import Footer from './component/Footer'
+import ProductPage from './component/ProductPge'
 
-export default function Home() {
+export default function page() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+    <div>
+      <Header/>
+      <Hero/>
+      <div className="flex flex-col sm:flex-row justify-center gap-6  bg-[#FAF4F4]">
+      <Card img='/img1.png' name='Side Table' veiw='View More'/>
+      <Card img='/img5.png' name='Side Table' veiw='View More'/>
+      </div>
+      <NextCard/>
+      <div className="flex flex-wrap sm:flex-row flex-col sm:items-start items-center sm:justify-start justify-center ">
+      <Card2 para='Trenton Modular sofa-3' price='25,000.00' img='/img2.png' />
+      <Card2 para='Granite Dining Table with ' para2='dining Chair' price='25,000.00' img='/img6.png' />
+      <Card2 para='Outdoor bar Table and ' para2='stool'price='25,000.00' img='/img7.png' />
+      <Card2 para='Plain console and teek' para2='mirror' price='25,000.00' img='/img8.png' />
     </div>
-  );
+
+    <Same/>
+
+    <NextCard/>
+    
+    <div className="flex flex-wrap justify-center gap-4 p-4  overflow-x-hidden">
+  <Card3 para='Going all in the millennial design' img='/img9.png'/>
+  <Card3 para='Going all in the millennial design' img='/img10.png'/>
+  <Card3 para='Going all in the millennial design' img='/img11.png'/>
+</div>
+<Link href={'#'} className="underline text-center font-bold mt-4 block">
+  View All Posts
+</Link>
+<Follow/>
+<Footer/>
+
+
+
+    </div>
+  )
 }
