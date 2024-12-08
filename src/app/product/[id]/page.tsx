@@ -9,7 +9,7 @@ import { useState } from "react";
 export default function ProductDetail({ params }: { params: { id: string } }) {
   const product = Products.find((item) => item.id === parseInt(params.id));
 
-  const [cart, setCart] = useState<number[]>([]);
+  // const [cart, setCart] = useState<number[]>([]);
 
   if (!product) return <p>Product not found!</p>; // If product doesn't exist
 

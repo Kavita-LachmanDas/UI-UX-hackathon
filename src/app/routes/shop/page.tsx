@@ -1,5 +1,5 @@
 import Shop from '@/app/component/Shop'
-import About from '@/app/component/Shop'
+
 import React from 'react'
 
 export default function page() {
