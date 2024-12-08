@@ -1,8 +1,7 @@
 import React from 'react'
 import Header from './Header'
 import AboutShop from './AboutShop'
-import Card3 from './Card3'
-import Card2 from './Card2'
+
 import Footer from './Footer'
 import Pagination from './Pagination'
 import Turn from './Turn'

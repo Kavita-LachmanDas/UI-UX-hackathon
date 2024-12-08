@@ -4,7 +4,7 @@ import { BiFilter } from 'react-icons/bi'
 export default function AboutShop() {
   return (
     <div>
-          {/* Filter Section */}
+         
       <div className="container mx-auto px-6 py-4">
         <div className="flex flex-wrap items-center justify-between gap-4">
           {/* Left Section */}

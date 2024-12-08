@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from 'next/link';
 import React from 'react'
 
 // // export default function Footer() {
@@ -141,17 +141,18 @@ export default function Footer() {
             <h4 className="text-black font-semibold mb-3">Links</h4>
             <ul className="space-y-1">
               <li className="text-gray-600 cursor-pointer hover:text-black">
-                Home
+             <Link href={'/'}>  Home </Link> 
               </li>
               <li className="text-gray-600 cursor-pointer hover:text-black">
-                Shop
+              <Link href={'/routes/shop'}>  Shop </Link> 
               </li>
               <li className="text-gray-600 cursor-pointer hover:text-black">
-                About
+              <Link href={'/routes/blog'}>  About </Link> 
               </li>
               <li className="text-gray-600 cursor-pointer hover:text-black">
-                Contact
+              <Link href={'/routes/contact'}>  Contact </Link> 
               </li>
+              
             </ul>
           </div>
 

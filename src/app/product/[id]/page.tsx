@@ -1,6 +1,7 @@
 'use client'
 import Footer from "@/app/component/Footer";
-import ImageGallery from "@/app/component/ImageGallery";
+import Header from "@/app/component/Header";
+
 import { Products } from "@/app/data/Products";
 import Image from "next/image";
 import { useState } from "react";
@@ -12,10 +13,10 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
 
   if (!product) return <p>Product not found!</p>; // If product doesn't exist
 
-  const addToCart = () => {
-    setCart([...cart, product.id]);
-    alert(`${product.name} added to cart!`);
-  };
+  // const addToCart = () => {
+  //   setCart([...cart, product.id]);
+  //   alert(`${product.name} added to cart!`);
+  // };
 
   
 
@@ -41,6 +42,7 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
 
 return(
 <div>
+  <Header/>
     
 <section className="text-gray-600 body-font overflow-hidden">
   <div className="container px-5 py-24 mx-auto">

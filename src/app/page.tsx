@@ -9,7 +9,7 @@ import Card3 from './component/Card3'
 import Link from 'next/link'
 import Follow from './component/Follow'
 import Footer from './component/Footer'
-import ProductPage from './component/ProductPge'
+
 
 export default function page() {
   return (

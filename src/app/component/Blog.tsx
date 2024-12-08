@@ -3,6 +3,12 @@
 // import Pagination from "./Pagination";
 // import Turn from "./Turn";
 
+import Link from "next/link";
+import Footer from "./Footer";
+import Header from "./Header";
+import Pagination from "./Pagination";
+import Turn from "./Turn";
+
 // // pages/blog.js
 // export default function Blog() {
 //     const posts = [
@@ -158,14 +164,7 @@
 //       </div>
 //     );
 //   }
-  
 import Image from "next/image";
-import Footer from "./Footer";
-import Header from "./Header";
-import Pagination from "./Pagination";
-import Turn from "./Turn";
-
-// pages/blog.js
 export default function Blog() {
   const posts = [
     {
@@ -211,7 +210,7 @@ export default function Blog() {
   ];
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Header />
 
       <div className="mt-[80px]">
@@ -231,8 +230,8 @@ export default function Blog() {
         </div>
       </div>
 
-      <div className="min-h-screen bg-gray-50 p-9">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-10 w-[900px]">
+      <div className="min-h-screen bg-gray-50 px-4 sm:px-6 lg:px-9 py-6">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-10">
           {/* Blog Posts */}
           <div className="lg:col-span-3 space-y-4">
             {posts.map((post) => (
@@ -259,12 +258,12 @@ export default function Blog() {
                     iste eos perferendis ad molestiae ratione suscipit harum
                     earum?
                   </p>
-                  <a
+                  <Link
                     href="#"
                     className="text-blue-500 hover:underline font-medium"
                   >
                     Read more
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))}
@@ -294,15 +293,15 @@ export default function Blog() {
               <ul className="space-y-2">
                 {recentPosts.map((post, index) => (
                   <li key={index} className="text-gray-600">
-                    <a
+                    <Link
                       href="#"
                       className="flex items-center gap-2 hover:underline"
                     >
                       <div className="w-20 h-10 bg-gray-200 rounded">
-                        <Image src={'/img29.png'} width={300} height={300} alt="hi"/>
+                        <Image src={"/img29.png"} width={300} height={300} alt="hi" />
                       </div>
                       <span>{post}</span>
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
